@@ -92,4 +92,15 @@ Steps:
 - After the for loop, log highestNumber to the console.
 */
 
+var highestNumber = 0;
 var numbers = [20, 3, 5, 7, 13, 30];
+for (var i = 0; i < numbers.length; i++) {
+  if (numbers[i] > highestNumber) {
+    highestNumber = numbers[i]
+  }
+  else {
+    highestNumber = highestNumber
+  };
+};
+
+console.log(highestNumber);
