@@ -3,22 +3,28 @@
 	Create a fourth variable, greeting, that combines these 3 variables
 	to form a greeting.
 	For example, "Hello, I'm Anthony, I'm 20 years old and live in 100 Main St."
-	Log this variable to the console (console.log(yourVariableName)). 
+	Log this variable to the console (console.log(yourVariableName)).
 	Check the console to make sure you're getting the desired result.
 
 */
+
+var name = "Aaron";
+var age = 30;
+var address = '4528 Whitecliff Way.';
+var greeting = "Hello, I'm " + name + ", I'm " + age + " years old and live at " + address;
+console.log(greeting);
 
 /*
 	Part 2: Create another variable called greeting2. This time, use the
-	new ES6 Syntax, string interpolation, to create the same greeting.
-
+	new ES6 Syntax, string interpolation, to create the same greeting
 	Hint: String interpolation uses backticks (`) instead of quotation marks.
 
-	Log this variable to the console (console.log(yourVariableName)). 
+	Log this variable to the console (console.log(yourVariableName)).
 	Check the console to make sure you're getting the desired result.
 
 */
-
+var greeting2 = `Hello I'm ${name}, I'm ${age} years old and live at ${address}`;
+console.log(greeting2);
 /*
 	Part 3: Pythagorean theorem. We will be using the Math object we saw earlier
 	in the lesson for this problem.
@@ -39,10 +45,13 @@
 	Hint: We need to be able to calculate the square of a number to find the value
 	of the hypotenuse. Does the Math object give us a function find the square of a number?
 
-	Log the side1, side2 and side3 variables to the console (console.log(yourVariableName)). 
+	Log the side1, side2 and side3 variables to the console (console.log(yourVariableName)).
 	Check the console to make sure you're getting the desired result.
 */
-
+var side1 = 7;
+var side2 = 11;
+var side3 = Math.sqrt(side1*side1 + side2*side2);
+console.log(side1, side2, side3);
 /*
 	Part 4: (No coding is needed for this part).
 	We are given a list of 20 numbers. We have to go through the list and find the
@@ -56,19 +65,26 @@
 
 	Bonus: What would the pseudocode look like if you also had to find the smallest number?
 */
-
+//1. get list of 20 numbers.
+//2. select two numbers at random
+//3. compare numbers to each other
+//4. keep the larger number, discard the smaller number
+//5. select another number from remaining group of un-examined numbers
+//6. repeat steps 3-5 until all numbers have been examined
+//7. last number remaining is the largest number.
+//Bonus: change step 4 such that the smaller number is retained, and the larger number is discarded.
 
 /* Bonus
 Take a look at the numbers array below. Use the pseudo code you wrote above to find the largest number and log it to the console in the following format: `"The highest number is #"`.
 
-If you need a hint on how to solve this one, take a look at the steps listed below, along with the linked resources. 
+If you need a hint on how to solve this one, take a look at the steps listed below, along with the linked resources.
 
 Steps:
 - First create a variable highestNumber and give it a value of the number 0.
-- Then use a for loop(https://www.w3schools.com/js/js_loop_for.asp) to loop through the numbers array. 
+- Then use a for loop(https://www.w3schools.com/js/js_loop_for.asp) to loop through the numbers array.
 	Your for loop should look something like this:
 	for (var i = 0; i < numbers.length; i++) {
-	
+
 	}
 - Within the loop, use an if statement(https://www.w3schools.com/js/js_if_else.asp) to see if the current number (numbers[i]) is greater than the number that is currently stored in highestNumber.
 - If so, save numbers[i] in the highestNumber variable.
